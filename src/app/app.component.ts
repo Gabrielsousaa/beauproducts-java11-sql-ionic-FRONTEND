@@ -24,6 +24,7 @@ export class MyApp {
       { title: 'Profile', component: 'ProfilePage', },
       { title: 'Categories', component: 'CategoriesPage' },
       { title: 'Logout', component: '' }
+
     ];
 
   }
