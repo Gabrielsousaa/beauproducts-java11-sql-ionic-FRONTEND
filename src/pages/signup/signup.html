@@ -6,7 +6,7 @@
 
 <ion-content padding>
   <ion-label stacked>Campos com o * do lado são obrigatorios</ion-label>
-  <form [formGroup]= "formGroup" (ngSubmit)="signup;  $event.preventDefault()">
+  <form [formGroup]="formGroup" (ngSubmit)="signup;  $event.preventDefault()">
     <ion-item>
       <ion-label stacked>Nome*</ion-label>
       <ion-input formControlName="name" type="text"></ion-input>
@@ -62,16 +62,15 @@
     </ion-item>
     <ion-item>
       <ion-label stacked>Estado</ion-label>
-      <ion-select formControlName="estateId" (ionChange)="updateCidades()">
-        <ion-option value="1">Minas Gerais</ion-option>
-        <ion-option value="2">São Paulo</ion-option>
+      <ion-select formControlName="estateId" (ionChange)="updateCities()">
+        <ion-option *ngFor="let estate of estates; first as f" [value]="estate.id" [selected]="f">{{estate.name}}</ion-option>
       </ion-select>
     </ion-item>
     <ion-item>
       <ion-label stacked>Cidade</ion-label>
       <ion-select formControlName="cityId">
-        <ion-option value="1">Uberlandia</ion-option>
-        <ion-option value="2">Campinas</ion-option>
+        <ion-option *ngFor="let city of cities" [value]="city.id">{{city.name}}</ion-option>
+        <!-- o city.id é o id do backend e o cityId é o do form definido no signup -->
       </ion-select>
     </ion-item>
     <br>
