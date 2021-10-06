@@ -6,16 +6,16 @@
 
 <ion-content padding>
   <ion-label stacked>Campos com o * do lado são obrigatorios</ion-label>
-  <form (ngSubmit)="signup;  $event.preventDefault()">
+  <form [formGroup]= "formGroup" (ngSubmit)="signup;  $event.preventDefault()">
     <ion-item>
       <ion-label stacked>Nome*</ion-label>
-      <ion-input name="name" type="text"></ion-input>
+      <ion-input formControlName="name" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Email*</ion-label>
-      <ion-input name="email" type="text"></ion-input>
+      <ion-input formControlName="email" type="text"></ion-input>
     </ion-item>
-    <ion-list radio-group name="tipo">
+    <ion-list radio-group formControlName="tipo">
       <ion-list-header>
         Tipo de cliente
       </ion-list-header>
@@ -30,46 +30,46 @@
     </ion-list>
     <ion-item>
       <ion-label stacked>Cpf ou Cnpj*</ion-label>
-      <ion-input name="cpfOuCnpj" type="text"></ion-input>
+      <ion-input formControlName="cpfOuCnpj" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Senha*</ion-label>
-      <ion-input name="senha" type="password"></ion-input>
+      <ion-input formControlName="senha" type="password"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Bairro*</ion-label>
-      <ion-input name="bairro" type="text"></ion-input>
+      <ion-input formControlName="bairro" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Logradouro</ion-label>
-      <ion-input name="logradouro" type="text"></ion-input>
+      <ion-input formControlName="logradouro" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Numero*</ion-label>
-      <ion-input name="numero" type="text"></ion-input>
+      <ion-input formControlName="numero" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>CEP*</ion-label>
-      <ion-input name="cep" type="text"></ion-input>
+      <ion-input formControlName="cep" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Endereço completo*</ion-label>
-      <ion-input name="endereco" type="text"></ion-input>
+      <ion-input formControlName="endereco" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Celular/Telefone*</ion-label>
-      <ion-input name="telefone" type="text"></ion-input>
+      <ion-input formControlName="telefone" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Estado</ion-label>
-      <ion-select name="estateId" (ionChange)="updateCidades()">
+      <ion-select formControlName="estateId" (ionChange)="updateCidades()">
         <ion-option value="1">Minas Gerais</ion-option>
         <ion-option value="2">São Paulo</ion-option>
       </ion-select>
     </ion-item>
     <ion-item>
       <ion-label stacked>Cidade</ion-label>
-      <ion-select name="cityId">
+      <ion-select formControlName="cityId">
         <ion-option value="1">Uberlandia</ion-option>
         <ion-option value="2">Campinas</ion-option>
       </ion-select>
