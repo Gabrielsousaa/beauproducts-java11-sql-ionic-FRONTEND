@@ -11,13 +11,15 @@
       <ion-label stacked>Nome*</ion-label>
       <ion-input formControlName="name" type="text"></ion-input>
     </ion-item>
-    <p class = "danger" *ngIf="formGroup.controls['name'].dirty && formGroup.controls['name'].errors" margin-left>Valor inválido</p>
+    <p class="danger" *ngIf="formGroup.controls['name'].dirty && formGroup.controls['name'].errors" margin-left>Valor
+      inválido</p>
     <ion-item>
       <ion-label stacked>Email*</ion-label>
       <ion-input formControlName="email" type="text"></ion-input>
     </ion-item>
-    <p class = "danger" *ngIf="formGroup.controls['email'].dirty && formGroup.controls['email'].errors" margin-left>Valor inválido</p>
-    <ion-list radio-group formControlName="tipo">
+    <p class="danger" *ngIf="formGroup.controls['email'].dirty && formGroup.controls['email'].errors" margin-left>Valor
+      inválido</p>
+    <ion-list radio-group formControlName="clientType">
       <ion-list-header>
         Tipo de cliente
       </ion-list-header>
@@ -31,36 +33,36 @@
       </ion-item>
     </ion-list>
     <ion-item>
-      <ion-label stacked>Cpf ou Cnpj*</ion-label>
-      <ion-input formControlName="cpfOuCnpj" type="text"></ion-input>
+      <ion-label stacked>CPF ou CNPJ*</ion-label>
+      <ion-input formControlName="cpfOuCnpj"></ion-input><p class="danger" *ngIf="formGroup.controls['cpfOuCnpj'].dirty && formGroup.controls['cpfOuCnpj'].errors" margin-left>Valor inválido</p>
     </ion-item>
     <ion-item>
       <ion-label stacked>Senha*</ion-label>
-      <ion-input formControlName="senha" type="password"></ion-input>
+      <ion-input formControlName="password" type="password"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Bairro*</ion-label>
-      <ion-input formControlName="bairro" type="text"></ion-input>
+      <ion-input formControlName="district" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Logradouro</ion-label>
-      <ion-input formControlName="logradouro" type="text"></ion-input>
+      <ion-input formControlName="publicPlace" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Numero*</ion-label>
-      <ion-input formControlName="numero" type="text"></ion-input>
+      <ion-input formControlName="number" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>CEP*</ion-label>
-      <ion-input formControlName="cep" type="text"></ion-input>
+      <ion-input formControlName="zipCode" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Endereço completo*</ion-label>
-      <ion-input formControlName="endereco" type="text"></ion-input>
+      <ion-input formControlName="fullAddress" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Celular/Telefone*</ion-label>
-      <ion-input formControlName="telefone" type="text"></ion-input>
+      <ion-input formControlName="phoneNumber1" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label stacked>Estado</ion-label>
