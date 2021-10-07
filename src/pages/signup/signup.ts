@@ -25,7 +25,7 @@ export class SignupPage {
     public estateService: EstateService,
   ) {
     this.formGroup = formBuilder.group({
-      name: ['Joagquin', [Validators.required, Validators.minLength(5), Validators.maxLength(120)]],
+      name: ['Joagquin', [Validators.required, Validators.maxLength(50)]],
       email: ['joaguin@gmail.com', [Validators.required, Validators.email]],
       tipo: ['1', [Validators.required]],
       cpfOuCnpj: ['05645767865', [Validators.required, Validators.minLength(11), Validators.maxLength(14)]],
